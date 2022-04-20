@@ -21,7 +21,7 @@ def predict_rub_salary_sj(vacancy):
 def report_vacancies_sj(programming_languages, sj_token, pages=5):
     if not pages:
         pages = float('inf')
-    report = {'service': 'HeadHunter', 'city': 'Moscow'}
+    report = {'service': 'Superjob', 'city': 'Moscow'}
     report_languages = {}
     for language in programming_languages:
         vacancies = []
