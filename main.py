@@ -2,20 +2,20 @@ import os
 
 from dotenv import load_dotenv
 
-from common_functions import drow_terminal_table
+from common_functions import draw_terminal_table
 from hh_functions import report_vacancies_hh
 from sj_functions import report_vacancies_sj
 
-programming_languages = ['Python', 'Java']
+PROGRAMMING_LANGUAGES = ['Python', 'Java']
 
 
 def main():
     load_dotenv()
     sj_token = os.getenv('SJ_API_TOKEN')
-    vacancies_hh = report_vacancies_hh(programming_languages)
-    vacancies_sj = report_vacancies_sj(programming_languages, sj_token)
-    drow_terminal_table(vacancies_hh)
-    drow_terminal_table(vacancies_sj)
+    vacancies_hh = report_vacancies_hh(PROGRAMMING_LANGUAGES)
+    vacancies_sj = report_vacancies_sj(PROGRAMMING_LANGUAGES, sj_token)
+    draw_terminal_table(vacancies_hh)
+    draw_terminal_table(vacancies_sj)
 
 
 if __name__ == '__main__':
