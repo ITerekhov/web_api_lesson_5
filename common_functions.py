@@ -8,7 +8,6 @@ def predict_salary(salary_from, salary_to):
         return int(salary_from * 1.2)
     elif salary_to:
         return int(salary_to * 0.8)
-    return None
 
 
 def draw_terminal_table(report_vacancies: dict):
